@@ -2,6 +2,7 @@
 int main()
 {
     int n;
+    printf("enter the size of array\n");
     scanf("%d", &n);
     int arr[50];
     int prefix[50];
@@ -10,14 +11,14 @@ int main()
     {
         scanf("%d", &arr[i]);
     }
-    prefix[0] = 0; // because indexing statr from 1
+    prefix[0] = arr[0]; // because indexing starts from 0
     for (int i = 1; i < n; i++)
     {
-        prefix[i] = prefix[i - 1] + arr[i - 1];
+        prefix[i] = prefix[i - 1] + arr[i];
     }
     int r, l;
     printf("enter the range\n");
-    scanf("%d%d", &r, &l);
+    scanf("%d%d", &l, &r);
     int sum = prefix[r] - prefix[l - 1];
     printf("%d", sum);
     return 0;
