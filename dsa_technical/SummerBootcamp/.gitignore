@@ -1,1 +1,5 @@
 *.exe
+*.o
+*.out
+*.class
+*.obj
