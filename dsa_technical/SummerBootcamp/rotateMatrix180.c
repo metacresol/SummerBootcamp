@@ -13,7 +13,7 @@ int main()
             scanf("%d", &arr[i][j]);
         }
     }
-    // reverse the rows of the transposed matrix
+    // reverse the rows of the  matrix
     for (int i = 0; i < r; i++)
     {
         int start = 0;
@@ -27,7 +27,21 @@ int main()
             end--;
         }
     }
-    
+    // reverse the columns of the matrix
+    for (int i = 0; i < r; i++)
+    {
+        int st = 0;
+        int end = r - 1;
+        while (st < end)
+        {
+            int temp = arr[st][i];
+            arr[st][i] = arr[end][i];
+            arr[end][i] = temp;
+            st++;
+            end--;
+        }
+    }
+
     // printing the rotated matrix
     for (int i = 0; i < r; i++)
     {
