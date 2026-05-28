@@ -1,0 +1,1 @@
+ if (pos >= 1 && pos <= len)
