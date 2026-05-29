@@ -7,8 +7,10 @@ void main()
     printf("enter first string: ");
     scanf("%s", s1);
     printf("enter second string: ");
-    scanf("%s", s1);
-    char hash[256] = {0};
+    scanf("%s", s2);
+    int hash[256] = {0};
+    if (strlen(s1) != strlen(s2))
+        printf(" given two strings are not anagram");
     for (int i = 0; i < strlen(s1); i++)
     {
         hash[s1[i]]++;
@@ -17,11 +19,14 @@ void main()
     {
         hash[s2[i]]--;
     }
-    for (int i = 0; i < 256; i++)
+    int ans = 0;
+    for (int i = 0; i < strlen(s1); i++)
     {
-        if (hash[i] != 0)
+        if (hash[s1[i]] != 0)
+        {
             printf(" given two strings are not anagram");
-        break;
+            return;
+        }
     }
     printf("given two strings are  anagram");
 }
