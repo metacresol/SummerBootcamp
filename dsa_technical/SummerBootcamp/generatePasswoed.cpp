@@ -1,26 +1,35 @@
 #include <iostream>
 #include <string>
+#include <sstream>
 using namespace std;
-
 int main()
 {
-    string str;
-    cout << "Enter a string: ";
-    cin >> str;
-
-    int hash[256] = {0};
-    string result = "";
-
-    for (char ch : str)
+    string name;
+    string stu_id;
+    getline(cin, name);
+    getline(cin, stu_id);
+    for (int i = 0; i < name.size(); i++)
     {
-        if (hash[ch] == 0)
+        if (name[i] >= 'A' && name[i] <= 'Z')
         {
-            hash[ch] = 1;
-            result += ch;
+            name[i] = name[i] + 32;
         }
     }
+    stringstream ss(name);
+    string word;
+    string firstname = "";
+    string lastname = "";
+    bool firstwordfound = false;
 
-    cout << "After removing duplicates: " << result;
-
-    return 0;
+    while (ss >> word)
+    {
+        if (!firstwordfound)
+        {
+            firstname = word;
+            firstwordfound = "true";
+        }
+        lastname = word;
+    }
+    string username = firstname + "_" + lastname + stu_id;
+    cout << username;
 }
