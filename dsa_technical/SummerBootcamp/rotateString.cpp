@@ -5,8 +5,8 @@ int main()
 {
     string old;
     getline(cin, old);
-
-    string New(old.length(), ' ');
+    // string newS="";//this will throw error bcoz size of string is not defined.
+    string New(old.length(), ' ');// here size of new string is defined same as length of old string . 
 
     int n;
     cin >> n;
