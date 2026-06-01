@@ -41,7 +41,7 @@ int main()
             {
                 arr[i][j] = arr[i][j - 1];
             }
-        }3
+        }
         for (int i = 0; i < c; i++)
         {
             scanf("%d", &arr[i][pos]);
