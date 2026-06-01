@@ -32,7 +32,7 @@ void main()
         for (int j = 0; j < c; j++)
         {
             if (idx != i)
-                printf("%d", matrix[i][j]);
+                printf("%d ", matrix[i][j]);
             else
                 continue;
         }
