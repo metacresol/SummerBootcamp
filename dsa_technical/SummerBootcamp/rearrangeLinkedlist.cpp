@@ -1,4 +1,4 @@
-// update value of doubluy linked list at given position.
+// even elemnts comes at begining in reverse fashion and odd elments in the last keeping order preserved.
 #include <iostream>
 using namespace std;
 class Node
