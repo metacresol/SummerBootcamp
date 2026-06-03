@@ -16,7 +16,7 @@ class list{
         void insertFront(int val){
             Node * newnode=new Node(val);
             if(head==NULL){
-                head=tail=NULL;
+                head=tail=newnode;
                 return;
             }
             else{
@@ -24,16 +24,16 @@ class list{
                 head=newnode;
             }
         }
-        // void display(){
-        //     Node*temp=head;
-        //     while(temp!=head){
-        //         cout<<temp->data<<" ";
-        //         temp=temp->next;
-        //     }
-        // }
-        // void segregate(){
+        void display(){
+            Node*temp=head;
+            while(temp!=NULL){
+                cout<<temp->data<<" ";
+                temp=temp->next;
+            }
+        }
+        void segregate(){
 
-        // }
+        }
 
 };
 int main(){
