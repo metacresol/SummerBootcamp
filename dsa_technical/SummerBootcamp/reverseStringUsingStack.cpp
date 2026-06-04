@@ -5,17 +5,30 @@ using namespace std;
 int main()
 {
     stack<char> s;
-    string rev = "";
+    // string rev = "";
     string exp;
     getline(cin, exp);
-    for (char ch : exp)
+    for (char ch : exp) // hello world
     {
-        s.push(ch);
+        if (ch != ' ')
+            s.push(ch);
+        else
+        {
+            while (!s.empty())
+            {
+
+                cout << s.top();
+                s.pop();
+            }
+            cout << " ";
+        }
     }
     while (!s.empty())
     {
-        rev += s.top();
+
+        cout << s.top();
         s.pop();
     }
-    cout << rev;
+
+    return 0;
 }
