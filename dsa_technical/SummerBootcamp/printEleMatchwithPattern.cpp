@@ -1,12 +1,14 @@
 // update value of doubluy linked list at given position.
+
+pending.
 #include <iostream>
 using namespace std;
 class Node
 {
 public:
-    int data;
+    string data;
     Node *next;
-    Node(int val)
+    Node(string val)
     {
         data = val;
         next = NULL;
@@ -18,21 +20,7 @@ class list
     Node *tail = NULL;
 
 public:
-    void insert_end(int val)
-    {
-        Node *newnode = new Node(val);
-        if (head == NULL)
-        {
-            head = tail = newnode;
-            return;
-        }
-        else
-        {
-            tail->next = newnode;
-            tail = newnode;
-        }
-    }
-    void insert_front(int val)
+    void insert_front(string val)
     {
         Node *newnode = new Node(val);
         if (head == NULL)
@@ -44,6 +32,22 @@ public:
         {
             newnode->next = head;
             head = newnode;
+        }
+    }
+    void match(string s){
+        Node * temp=head;
+        while(temp!=NULL){
+            string str=temp->data;
+            int p=0,q=0;
+            bool ismatch=false;
+            while(str[p]!='\0'&&s[q]!='\0'){
+                if(str[p]!=s[q])
+                    p++;
+                else{
+                    p++;q++;
+                }
+            }
+
         }
     }
     void display()
@@ -66,13 +70,11 @@ int main()
     cout << "enter the value of nodes";
     for (int i = 0; i < n; i++)
     {
-        int x;
+        string x;
         cin >> x;
-        if (x % 2 == 0)
-            l.insert_front(x);
-        else
-            l.insert_end(x);
+        l.insert_front(x);
     }
-
+    string pattern;
+    cin>>pattern;
     l.display();
 }
