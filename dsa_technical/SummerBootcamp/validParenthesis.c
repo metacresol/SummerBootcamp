@@ -18,6 +18,7 @@ int main()
         {
             stack[++top] = ch;
         }
+
         else
         {
             if (top == -1)
