@@ -14,7 +14,7 @@ int main()
     int mid = 0;
     int low = 0;
     int high = n - 1;
-    while (mid < high)
+    while (mid <= high)
     {
         if (vec[mid] == 1)
             mid++;
@@ -28,7 +28,6 @@ int main()
         {
             swap(vec[mid], vec[high]);
             high--;
-            mid++;
         }
     }
     for (int i : vec)
