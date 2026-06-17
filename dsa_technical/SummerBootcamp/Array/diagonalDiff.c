@@ -1,5 +1,5 @@
+//diagonal difference of matrices.
 #include <stdio.h>
-
 int main()
 {
     int n;

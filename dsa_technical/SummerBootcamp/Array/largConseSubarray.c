@@ -1,7 +1,5 @@
 #include <stdio.h>
-
 // longest increasing contiguous subarray
-
 int main()
 {
     int n;
