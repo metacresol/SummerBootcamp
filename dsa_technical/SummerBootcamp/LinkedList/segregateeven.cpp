@@ -1,4 +1,5 @@
 #include<iostream>
+pending
 using namespace std;
 class Node{
     public:
